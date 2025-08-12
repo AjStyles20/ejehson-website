@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - EJEHSON & SONS LTD | Electrical Suppliers in Birnin Kebbi</title>
+  <link rel="stylesheet" href="/ejehson-website/CSS/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* About page specific styles */
+    .about-hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                  url('/assets/placeholder-transformer.jpg') center/cover;
+      color: white;
+      text-align: center;
+      padding: 120px 5%;
+    }
+    
+    .about-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .about-hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+
+    .cta-products{
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    
+    .history-section {
+      padding: 80px 5%;
+      background: white;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      color: var(--primary);
+      font-size: 2.2rem;
+      position: relative;
+    }
+    
+    .section-title:after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--secondary);
+      margin: 15px auto;
+      border-radius: 2px;
+    }
+    
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .timeline:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--primary);
+      left: 50%;
+      margin-left: -2px;
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      padding-right: calc(50% + 30px);
+      text-align: right;
+    }
+    
+    .timeline-item:nth-child(even) {
+      padding-left: calc(50% + 30px);
+    }
+    
+    .timeline-content {
+      background: var(--light);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      position: relative;
+    }
+    
+    .timeline-content:after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      width: 0;
+      height: 0;
+      top: 30px;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content:after {
+      left: 100%;
+      border-width: 10px 0 10px 15px;
+      border-color: transparent transparent transparent var(--light);
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content:after {
+      right: 100%;
+      border-width: 10px 15px 10px 0;
+      border-color: transparent var(--light) transparent transparent;
+    }
+    
+    .timeline-year {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      top: 0;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-year {
+      left: calc(50% - 50px);
+    }
+    
+    .timeline-item:nth-child(even) .timeline-year {
+      right: calc(50% - 50px);
+    }
+    
+    .values-section {
+      padding: 80px 5%;
+      background: var(--light);
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .value-card {
+      background: white;
+      border-radius: 10px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    
+    .value-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .value-icon {
+      font-size: 3rem;
+      color: var(--secondary);
+      margin-bottom: 20px;
+    }
+    
+    .value-card h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    
+    .team-section {
+      padding: 80px 5%;
+      background: white;
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .team-member {
+      background: var(--light);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    
+    .member-photo {
+      height: 250px;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 5rem;
+    }
+    
+    .member-info {
+      padding: 25px 20px;
+    }
+    
+    .member-info h3 {
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+    
+    .member-title {
+      color: var(--secondary);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .member-bio {
+      color: var(--dark);
+      font-size: 0.95rem;
+    }
+    
+    .community-section {
+      padding: 80px 5%;
+      background: var(--light);
+      text-align: center;
+    }
+    
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 50px auto 0;
+    }
+    
+    .community-card {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+    
+    .community-card i {
+      font-size: 3rem;
+      color: var(--secondary);
+      margin-bottom: 20px;
+    }
+    
+    .community-card h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    
+    .partners-section {
+      padding: 80px 5%;
+      background: white;
+      text-align: center;
+    }
+    
+    .partners-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 50px auto 0;
+    }
+    
+    .partner-logo {
+      width: 150px;
+      height: 100px;
+      background: var(--light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--gray);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .timeline:before {
+        left: 30px;
+      }
+      
+      .timeline-item:nth-child(odd),
+      .timeline-item:nth-child(even) {
+        padding-left: 70px;
+        padding-right: 20px;
+        text-align: left;
+      }
+      
+      .timeline-item:nth-child(odd) .timeline-content:after,
+      .timeline-item:nth-child(even) .timeline-content:after {
+        left: 56px;
+        right: auto;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent var(--light) transparent transparent;
+      }
+      
+      .timeline-year {
+        left: 0 !important;
+        right: auto !important;
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+      }
+      
+      .about-hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Banner -->
+  <div class="banner">
+    <span>CAC RC: 780145</span>
+    <div id="language-switch">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ha">HA</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-placeholder">
+      <h1>EJEHSON & SONS LTD</h1>
+      <p>Electrical & Industrial Suppliers</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Hero -->
+  <section class="about-hero">
+    <h1>Powering Progress Since 2008</h1>
+    <p>For over 15 years, Ejehson & Sons has been the trusted electrical supplier for Kebbi State's industries, businesses, and communities.</p>
+    <a href="contact.html" class="cta-products">Contact Our Team</a>
+  </section>
+
+  <!-- History Section -->
+  <section class="history-section">
+    <h2 class="section-title">Our Journey</h2>
+    
+    <div class="timeline">
+      <!-- Timeline Item 1 -->
+      <div class="timeline-item">
+        <div class="timeline-year">2008</div>
+        <div class="timeline-content">
+          <h3>Founding of Ejehson & Sons</h3>
+          <p>Established in Birnin Kebbi by Solomon Ejeh with a small shop on Ahmadu Bello Way, focusing on basic electrical components for local contractors.</p>
+        </div>
+      </div>
+      
+      <!-- Timeline Item 2 -->
+      <div class="timeline-item">
+        <div class="timeline-year">2012</div>
+        <div class="timeline-content">
+          <h3>Expansion into Industrial Supply</h3>
+          <p>Began supplying transformers and heavy cables to Kebbi State's growing industrial sector, establishing partnerships with major manufacturers.</p>
+        </div>
+      </div>
+      
+      <!-- Timeline Item 3 -->
+      <div class="timeline-item">
+        <div class="timeline-year">2015</div>
+        <div class="timeline-content">
+          <h3>Family Leadership Transition</h3>
+          <p>Ignatius and Francis Ejeh joined the business, bringing fresh perspectives and expanding our product range to include premium Nigerian-made cables.</p>
+        </div>
+      </div>
+      
+      <!-- Timeline Item 4 -->
+      <div class="timeline-item">
+        <div class="timeline-year">2020</div>
+        <div class="timeline-content">
+          <h3>Infrastructure Growth</h3>
+          <p>Played a key role in Kebbi State's power infrastructure projects, supplying critical components for rural electrification initiatives.</p>
+        </div>
+      </div>
+      
+      <!-- Timeline Item 5 -->
+      <div class="timeline-item">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-content">
+          <h3>Modernization & Growth</h3>
+          <p>Implemented digital operations while maintaining our commitment to personalized service, serving over 500 clients across Northwest Nigeria.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values-section">
+    <h2 class="section-title">Our Core Values</h2>
+    
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3>Quality Assurance</h3>
+        <p>Every product meets Nigerian SON standards. We source only from certified manufacturers and test critical components.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3>Integrity</h3>
+        <p>Honest pricing, transparent dealings, and ethical business practices since day one.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3>Community Focus</h3>
+        <p>We invest in Kebbi's growth through job creation, technical training, and supporting local infrastructure projects.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3>Technical Expertise</h3>
+        <p>Our team provides expert guidance on electrical solutions for industrial, commercial, and residential applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <h2 class="section-title">Leadership Team</h2>
+    
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="member-photo">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="member-info">
+          <h3>Solomon Ejeh</h3>
+          <div class="member-title">Founder & Managing Director</div>
+          <p class="member-bio">With 30+ years in electrical engineering, Solomon established Ejehson & Sons to meet Kebbi's growing infrastructure needs.</p>
+        </div>
+      </div>
+      
+      <div class="team-member">
+        <div class="member-photo">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="member-info">
+          <h3>Ignatius Ejeh</h3>
+          <div class="member-title">Operations Director</div>
+          <p class="member-bio">Manages supply chain and logistics, ensuring timely delivery of products across Northwest Nigeria.</p>
+        </div>
+      </div>
+      
+      <div class="team-member">
+        <div class="member-photo">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="member-info">
+          <h3>Francis A. Ejeh</h3>
+          <div class="member-title">Technical Director</div>
+          <p class="member-bio">Certified electrical engineer providing technical consultation for complex industrial installations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section class="community-section">
+    <h2 class="section-title">Community Impact</h2>
+    <p>As a Kebbi-based business, we're committed to powering progress in our community</p>
+    
+    <div class="community-grid">
+      <div class="community-card">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h3>Technical Training</h3>
+        <p>Annual workshops for local electricians on modern installation techniques and safety standards.</p>
+      </div>
+      
+      <div class="community-card">
+        <i class="fas fa-solar-panel"></i>
+        <h3>Rural Electrification</h3>
+        <p>Partnered with Kebbi State Government to provide components for 15 rural electrification projects.</p>
+      </div>
+      
+      <div class="community-card">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>Youth Apprenticeship</h3>
+        <p>Training program for young Nigerians interested in electrical engineering careers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners Section -->
+  <section class="partners-section">
+    <h2 class="section-title">Trusted Partners</h2>
+    <p>We work with leading manufacturers and institutions</p>
+    
+    <div class="partners-grid">
+      <div class="partner-logo">Amode Cables</div>
+      <div class="partner-logo">Nigerian Electrical</div>
+      <div class="partner-logo">Kebbi State Gov</div>
+      <div class="partner-logo">PowerTech NG</div>
+      <div class="partner-logo">KAEDCO</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>EJEHSON & SONS LTD</h3>
+        <p>Wholesale & Retail Electrical Suppliers</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>17 Ahmadu Bello Way<br>Birnin Kebbi, Kebbi State</p>
+        <p>Phone: 0704 273 5379</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="products.html">Product Catalog</a></li>
+          <li><a href="contact.html">Request Quote</a></li>
+          <li><a href="about.html">Company History</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 EJEHSON & SONS LTD. RC 780145</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/2347042735379" class="whatsapp-float">
+    <img src="/ejehson-website/assets/whatsapp-icon.svg" alt="Chat on WhatsApp">
+  </a>
+
+  <script src="/ejehson-website/JavaScript/script.js"></script>
+
+  <!-- About Page JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Language toggle
+      const langButtons = document.querySelectorAll('.lang-btn');
+      
+      langButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          langButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          const lang = this.getAttribute('data-lang');
+          alert(`Language switched to ${lang === 'en' ? 'English' : 'Hausa'}. Full implementation would translate content.`);
+        });
+      });
+      
+      // Team member hover effect
+      const teamMembers = document.querySelectorAll('.team-member');
+      teamMembers.forEach(member => {
+        member.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-10px)';
+          this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
+        });
+        
+        member.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0)';
+          this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.08)';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

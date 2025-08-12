@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - EJEHSON & SONS LTD | Electrical Supplies</title>
+  <link rel="stylesheet" href="/ejehson-website/CSS/styles.css">
+</head>
+<body>
+  <!-- Top Banner -->
+  <div class="banner">
+    <span>CAC RC: 780145</span>
+    <div id="language-switch">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ha">HA</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-placeholder">
+      <h1>EJEHSON & SONS LTD</h1>
+      <p>Electrical & Industrial Suppliers</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Products Hero -->
+  <section class="page-hero">
+    <h1>Our Electrical Products</h1>
+    <p>Quality transformers, cables, and fittings for industrial and domestic use</p>
+  </section>
+
+  <!-- Product Filter -->
+  <section class="product-filter">
+    <div class="filter-options">
+      <button class="filter-btn active" data-filter="all">All Products</button>
+      <button class="filter-btn" data-filter="transformers">Transformers</button>
+      <button class="filter-btn" data-filter="cables">Cables & Wires</button>
+      <button class="filter-btn" data-filter="fittings">Fittings</button>
+    </div>
+    
+    <div class="search-box">
+      <input type="text" id="product-search" placeholder="Search products...">
+      <button type="button">🔍</button>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="products-grid">
+    <!-- Transformers -->
+    <div class="product-category" id="transformers">
+      <h2 class="category-title">Power Transformers</h2>
+      <div class="product-items">
+        <!-- Product 1 -->
+        <div class="product-card" data-category="transformers">
+          <div class="product-image">
+            <img src="/ejehson-website/assets/placeholder-transformer.jpg" alt="11kV Distribution Transformer">
+          </div>
+          <div class="product-details">
+            <h3>11kV Distribution Transformer</h3>
+            <p class="product-specs">Capacity: 50kVA - 500kVA</p>
+            <p class="product-desc">Oil-cooled transformers for industrial and utility applications</p>
+            <div class="product-meta">
+              <span class="product-code">EJ-TR11</span>
+              <span class="product-stock">In Stock</span>
+            </div>
+          </div>
+          <button class="btn-inquire" data-product="11kV Distribution Transformer">
+            Request Price
+          </button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-category="transformers">
+          <div class="product-image">
+            <img src="/ejehson-website/assets/placeholder-transformer.jpg" alt="33kV Power Transformer">
+          </div>
+          <div class="product-details">
+            <h3>33kV Power Transformer</h3>
+            <p class="product-specs">Capacity: 500kVA - 2.5MVA</p>
+            <p class="product-desc">Heavy-duty transformers for substations and large industries</p>
+            <div class="product-meta">
+              <span class="product-code">EJ-TR33</span>
+              <span class="product-stock">Special Order</span>
+            </div>
+          </div>
+          <button class="btn-inquire" data-product="33kV Power Transformer">
+            Request Price
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cables -->
+    <div class="product-category" id="cables">
+      <h2 class="category-title">Cables & Wires</h2>
+      <div class="product-items">
+        <!-- Product 1 -->
+        <div class="product-card" data-category="cables">
+          <div class="product-image">
+            <img src="/ejehson-website/assets/placeholder-cable.jpg" alt="Armored Copper Cable">
+          </div>
+          <div class="product-details">
+            <h3>Armored Copper Cable</h3>
+            <p class="product-specs">Sizes: 16mm² - 240mm²</p>
+            <p class="product-desc">XLPE insulated, PVC sheathed for underground installations</p>
+            <div class="product-meta">
+              <span class="product-code">EJ-AC16</span>
+              <span class="product-stock">In Stock</span>
+            </div>
+          </div>
+          <button class="btn-inquire" data-product="Armored Copper Cable">
+            Request Price
+          </button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-category="cables">
+          <div class="product-image">
+            <img src="/ejehson-website/assets/placeholder-cable.jpg" alt="Amode Electrical Cable">
+          </div>
+          <div class="product-details">
+            <h3>Amode PVC Cable</h3>
+            <p class="product-specs">Sizes: 1.5mm² - 25mm²</p>
+            <p class="product-desc">Quality Nigerian-made cables for domestic and industrial wiring</p>
+            <div class="product-meta">
+              <span class="product-code">EJ-AM15</span>
+              <span class="product-stock">In Stock</span>
+            </div>
+          </div>
+          <button class="btn-inquire" data-product="Amode PVC Cable">
+            Request Price
+          </button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" data-category="cables">
+          <div class="product-image">
+            <img src="/ejehson-website/assets/placeholder-cable.jpg" alt="Flexible Copper Wire">
+          </div>
+          <div class="product-details">
+            <h3>Flexible Copper Wire</h3>
+            <p class="product-specs">Sizes: 0.5mm² - 6mm²</p>
+            <p class="product-desc">Multi-strand wires for internal connections and panel wiring</p>
+            <div class="product-meta">
+              <span class="product-code">EJ-FW05</span>
+              <span class="product-stock">In Stock</span>
+            </div>
+          </div>
+          <button class="btn-inquire" data-product="Flexible Copper Wire">
+            Request Price
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fittings -->
+    <div class="product-category" id="fittings">
+      <h2 class="category-title">Electrical Fittings</h2>
+      <div class="product-items">
+        <!-- Product 1 -->
+        <div class="product-card" data-category="fittings">
+          <div class="product-image">
+            <img src="/ejehson-website/assets/placeholder-fitting.jpg" alt="Industrial Light Bulbs">
+          </div>
+          <div class="product-details">
+            <h3>Industrial LED Bulbs</h3>
+            <p class="product-specs">20W - 200W | IP65 Rated</p>
+            <p class="product-desc">High-bay and flood lights for factories and warehouses</p>
+            <div class="product-meta">
+              <span class="product-code">EJ-LED20</span>
+              <span class="product-stock">In Stock</span>
+            </div>
+          </div>
+          <button class="btn-inquire" data-product="Industrial LED Bulbs">
+            Request Price
+          </button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-category="fittings">
+          <div class="product-image">
+            <img src="/ejehson-website/assets/placeholder-fitting.jpg" alt="Weatherproof Sockets">
+          </div>
+          <div class="product-details">
+            <h3>Weatherproof Sockets</h3>
+            <p class="product-specs">IP66 | 15A/250V</p>
+            <p class="product-desc">Outdoor-rated sockets with rubber gaskets</p>
+            <div class="product-meta">
+              <span class="product-code">EJ-WS15</span>
+              <span class="product-stock">In Stock</span>
+            </div>
+          </div>
+          <button class="btn-inquire" data-product="Weatherproof Sockets">
+            Request Price
+          </button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" data-category="fittings">
+          <div class="product-image">
+            <img src="/ejehson-website/assets/placeholder-fitting.jpg" alt="Industrial Switches">
+          </div>
+          <div class="product-details">
+            <h3>Heavy-Duty Switches</h3>
+            <p class="product-specs">20A/415V | 2-Pole & 3-Pole</p>
+            <p class="product-desc">Industrial-grade switches for machinery control</p>
+            <div class="product-meta">
+              <span class="product-code">EJ-HS20</span>
+              <span class="product-stock">In Stock</span>
+            </div>
+          </div>
+          <button class="btn-inquire" data-product="Heavy-Duty Switches">
+            Request Price
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Docs -->
+  <section class="tech-docs">
+    <h2>Technical Resources</h2>
+    <div class="docs-grid">
+      <div class="doc-card">
+        <div class="doc-icon">📄</div>
+        <h3>Transformer Specifications</h3>
+        <p>Download technical sheets for all transformer models</p>
+        <a href="#" class="doc-download">Download PDF</a>
+      </div>
+      
+      <div class="doc-card">
+        <div class="doc-icon">📄</div>
+        <h3>Cable Size Calculator</h3>
+        <p>Tool for determining correct cable sizes for installations</p>
+        <a href="#" class="doc-download">Download Tool</a>
+      </div>
+      
+      <div class="doc-card">
+        <div class="doc-icon">📄</div>
+        <h3>Wiring Standards</h3>
+        <p>Nigerian electrical installation guidelines</p>
+        <a href="#" class="doc-download">Download Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>EJEHSON & SONS LTD</h3>
+        <p>Wholesale & Retail Electrical Suppliers</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>17 Ahmadu Bello Way<br>Birnin Kebbi, Kebbi State</p>
+        <p>Phone: 0704 273 5379</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="products.html">Product Catalog</a></li>
+          <li><a href="contact.html">Request Quote</a></li>
+          <li><a href="about.html">Company History</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 EJEHSON & SONS LTD. RC 780145</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/2347042735379" class="whatsapp-float">
+    <img src="/ejehson-website/assets/whatsapp-icon.svg" alt="Chat on WhatsApp">
+  </a>
+
+  <script src="/ejehson-website/JavaScript/script.js"></script>
+
+  <!-- Products Page JavaScript -->
+  <script>
+    // Product Filter Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const productCards = document.querySelectorAll('.product-card');
+      
+      // Filter button click handler
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          const filterValue = this.getAttribute('data-filter');
+          
+          // Show/hide products based on filter
+          productCards.forEach(card => {
+            if (filterValue === 'all') {
+              card.style.display = 'block';
+            } else {
+              if (card.getAttribute('data-category') === filterValue) {
+                card.style.display = 'block';
+              } else {
+                card.style.display = 'none';
+              }
+            }
+          });
+          
+          // Scroll to relevant section
+          if (filterValue !== 'all') {
+            document.getElementById(filterValue).scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Product inquiry buttons
+      const inquireButtons = document.querySelectorAll('.btn-inquire');
+      inquireButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const productName = this.getAttribute('data-product');
+          const whatsappMessage = `Hello Ejehson & Sons! I'm interested in your ${productName}. Can you send pricing and specs?`;
+          const encodedMessage = encodeURIComponent(whatsappMessage);
+          window.open(`https://wa.me/2347042735379?text=${encodedMessage}`, '_blank');
+        });
+      });
+      
+      // Simple search functionality
+      const searchInput = document.getElementById('product-search');
+      searchInput.addEventListener('keyup', function() {
+        const searchTerm = this.value.toLowerCase();
+        
+        productCards.forEach(card => {
+          const productText = card.textContent.toLowerCase();
+          if (productText.includes(searchTerm)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
